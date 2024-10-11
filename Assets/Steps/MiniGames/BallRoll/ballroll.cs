@@ -9,7 +9,7 @@ public class ballroll : MonoBehaviour
     public float jumpForce;
     public float gravityScale;
     public float maxAngularVelocity;
-    public Transform camera;
+    public Transform Tcamera;
 
     private Vector3 moveDirection;
 
@@ -28,7 +28,7 @@ public class ballroll : MonoBehaviour
         // Capture movement input relative to the camera's orientation
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            moveDirection = (camera.forward * Input.GetAxis("Vertical")) + (camera.right * Input.GetAxis("Horizontal"));
+            moveDirection = (Tcamera.forward * Input.GetAxis("Vertical")) + (Tcamera.right * Input.GetAxis("Horizontal"));
             moveDirection = moveDirection.normalized * moveSpeed;
             theRB.AddForce(Physics.gravity * gravityScale);
             // Add force for horizontal movement (on x and z axes)
