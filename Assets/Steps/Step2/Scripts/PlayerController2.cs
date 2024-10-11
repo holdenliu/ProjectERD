@@ -27,15 +27,15 @@ public class PlayerController2 : MonoBehaviour
         {
             // you can also move the line here to make it so players cant move in the air
             // moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
-            if (Input.GetButtonDown("Jump"))
-            {
-                moveDirection.y = jumpForce;
-            }
+            //if (Input.GetButtonDown("Jump"))
+            //{
+            //    moveDirection.y = jumpForce;
+            //}
         }
 
         
 
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
+        //*****moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
         controller.Move(moveDirection * Time.deltaTime);
     }
 }

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text moneyText;
     public GameObject deathscreen;
     public GameObject winscreen;
+    public string SceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,6 @@ public class GameManager : MonoBehaviour
 
     public void deathReset()
     {
-        SceneManager.LoadScene("Platforming");
+        SceneManager.LoadScene(SceneName);
     }
 }
